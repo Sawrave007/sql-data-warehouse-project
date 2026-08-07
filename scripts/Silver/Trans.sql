@@ -1,3 +1,6 @@
+
+
+
 INSERT INTO silver.crm_cust_info (
 cst_id,
 cst_key,
