@@ -1,9 +1,9 @@
 CREATE DATABASE DataWarehouse;
-
-use DataWarehouse
+GO
 
 CREATE SCHEMA bronze;
-GO
+Go
+
 
 CREATE SCHEMA silver;
 GO
