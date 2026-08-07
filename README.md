@@ -1,46 +1,80 @@
-# Data Warehouse & Sales Analytics
-Building a modern warehouse with SQL Server, including ETL process, data modeling and analytics
+# SQL Data Warehouse & Analytics Project
 
-# Overview
- 
-This project demonstrates the design and implementation of a modern data warehouse using SQL Server. The objective is to transform raw ERP and CRM datasets into a structured analytical database that supports business reporting and decision-making.
+## Overview
+This project demonstrates an end-to-end data warehousing and analytics solution built on **SQL Server**, following **Medallion Architecture** (Bronze, Silver, Gold layers). The goal is to consolidate sales data from multiple source systems into a structured, analysis-ready data warehouse.
 
-The project covers the complete data engineering workflow, including data ingestion, data cleansing, dimensional modeling, and SQL-based business analytics.
 
-# Project Objectives
-Build a centralized SQL Server data warehouse from multiple business data sources.
-Clean and standardize raw ERP and CRM datasets.
-Design an analytical data model using a Star Schema.
-Develop SQL queries that provide meaningful business insights.
-Practice real-world ETL and data warehousing concepts.
-# Technology Stack
-SQL Server Express
-SQL Server Management Studio (SSMS)
-T-SQL
-Git & GitHub
-Draw.io (Data Modeling)
-CSV Data Sources
-Data Warehouse Architecture
 
-# The warehouse follows a Medallion-inspired architecture consisting of three logical layers.
+## Data Architecture
 
-# Bronze Layer
-Raw ERP and CRM datasets
-Imported directly from CSV files
-Minimal transformations
-# Silver Layer
-Data cleansing
-Standardized formats
-Removed duplicates
-Corrected inconsistent values
-Prepared data for integration
-# Gold Layer
+The project follows the **Medallion Architecture** pattern:
 
-Business-ready dimensional model containing:
+**Bronze Layer** *(In Progress)*
+- Ingests raw CSV data as-is from source systems (ERP and CRM)
+- No transformations applied — preserves original data fidelity
+- Loaded directly into SQL Server using bulk ingestion scripts
 
-Fact tables
-Dimension tables
-Optimized for analytical queries
-Supports reporting and dashboard creation
+**Silver Layer** 
+- Data cleansing, standardization, and normalization
+- Resolves data quality issues from the Bronze layer
+- Prepares data for analytical modeling
+
+**Gold Layer** 
+- Business-ready data modeled into a **Star Schema**
+- Fact and dimension tables optimized for analytical queries
+- Foundation for reporting and dashboards
+
+---
+
+## Project Scope
+
+- **Data Sources:** Two source systems — ERP and CRM — provided as CSV files
+- **Database:** Microsoft SQL Server (SQL Server Express)
+- **Approach:** ETL pipelines built entirely in T-SQL
+- **Goal:** Enable SQL-based analytics on customer behavior, product performance, and sales trends
+
+---
+
+## Tools Used
+
+- **Database:** Microsoft SQL Server Express
+- **IDE:** SQL Server Management Studio (SSMS)
+- **Language:** T-SQL (DDL, DML, Stored Procedures)
+- **Version Control:** GitHub
+
+---
+
+## Repository Structure
+
+```
+sql-data-warehouse-project/
+│
+├── datasets/          # Raw CSV source files (ERP & CRM)
+├── bronze/            # Raw ingestion scripts
+├── silver/            # Cleansing and transformation scripts
+├── gold/              # Star schema and analytical model scripts
+└── README.md
+```
+
+---
+
+## Key Learning Outcomes
+
+- Medallion Architecture design and implementation
+- ETL pipeline development in SQL Server
+- Data modelling — fact and dimension tables, star schema
+- Data quality handling and standardization
+- SQL-based analytics and reporting
+
+---
+
+## Author
+**Sawrave Ahmed**
+- GitHub: [github.com/Sawrave007](https://github.com/Sawrave007)
+- LinkedIn: [linkedin.com/in/sawrave-ahmed007](https://linkedin.com/in/sawrave-ahmed007)
+
+---
+
+*Inspired by the Data With Bara tutorial series on data warehousing.*
 
 
