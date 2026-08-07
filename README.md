@@ -1,15 +1,16 @@
 # SQL Data Warehouse & Analytics Project
 
 ## Overview
-This project demonstrates an end-to-end data warehousing and analytics solution built on **SQL Server**, following **Medallion Architecture** (Bronze, Silver, Gold layers). The goal is to consolidate sales data from multiple source systems into a structured, analysis-ready data warehouse.
+This project demonstrates an end-to-end data warehousing and analytics solution built on **SQL Server**, following **Medallion Architecture** (Bronze, Silver, Gold layers). The goal is to consolidate sales data from multiple source systems into a structured, analysis-ready data warehouse and deliver actionable business insights through SQL-based analytics.
 
 
+---
 
 ## Data Architecture
 
 The project follows the **Medallion Architecture** pattern:
 
-**Bronze Layer** *(In Progress)*
+**Bronze Layer** 
 - Ingests raw CSV data as-is from source systems (ERP and CRM)
 - No transformations applied — preserves original data fidelity
 - Loaded directly into SQL Server using bulk ingestion scripts
@@ -26,6 +27,18 @@ The project follows the **Medallion Architecture** pattern:
 
 ---
 
+## BI: Analytics & Reporting
+
+**Objective:** Develop SQL-based analytics to deliver detailed insights into:
+
+- **Customer Behavior** — understanding purchasing patterns and customer segments
+- **Product Performance** — identifying top and underperforming products
+- **Sales Trends** — tracking revenue patterns over time
+
+These insights empower stakeholders with key business metrics, enabling strategic decision-making.
+
+---
+
 ## Project Scope
 
 - **Data Sources:** Two source systems — ERP and CRM — provided as CSV files
@@ -38,7 +51,7 @@ The project follows the **Medallion Architecture** pattern:
 ## Tools Used
 
 - **Database:** Microsoft SQL Server Express
-- **IDE:** SQL Server Management Studio (SSMS)
+- **IDE:** SQL Server Management Studio (SSMS)/ VS Code
 - **Language:** T-SQL (DDL, DML, Stored Procedures)
 - **Version Control:** GitHub
 
@@ -50,10 +63,20 @@ The project follows the **Medallion Architecture** pattern:
 sql-data-warehouse-project/
 │
 ├── datasets/          # Raw CSV source files (ERP & CRM)
-├── bronze/            # Raw ingestion scripts
-├── silver/            # Cleansing and transformation scripts
-├── gold/              # Star schema and analytical model scripts
-└── README.md
+│
+├── docs/              # Project documentation
+│   ├── data_catalog.md          # Dataset field descriptions and metadata
+│   └── naming-conventions.md   # Naming guidelines for tables, columns, files
+│
+├── scripts/           # SQL scripts for ETL and transformations
+│   ├── bronze/        # Raw data extraction and loading scripts
+│   ├── silver/        # Data cleansing and transformation scripts
+│   └── gold/          # Analytical model and star schema scripts
+│
+├── tests/             # Data quality and test scripts
+├── README.md
+├── .gitignore
+└── requirements.txt
 ```
 
 ---
@@ -64,7 +87,7 @@ sql-data-warehouse-project/
 - ETL pipeline development in SQL Server
 - Data modelling — fact and dimension tables, star schema
 - Data quality handling and standardization
-- SQL-based analytics and reporting
+- SQL-based analytics and reporting for business insights
 
 ---
 
@@ -76,5 +99,4 @@ sql-data-warehouse-project/
 ---
 
 *Inspired by the Data With Bara tutorial series on data warehousing.*
-
 
