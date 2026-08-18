@@ -11,8 +11,8 @@ This project demonstrates an end-to-end data warehousing and analytics solution 
 The project follows the **Medallion Architecture** pattern:
 
 **Bronze Layer** 
-- Ingests raw CSV data as-is from source systems (ERP and CRM)
-- No transformations applied — preserves original data fidelity
+- Ingests raw CSV data as it is from source systems (ERP and CRM)
+- No transformations applied, preserves original data fidelity
 - Loaded directly into SQL Server using bulk ingestion scripts
 
 **Silver Layer** 

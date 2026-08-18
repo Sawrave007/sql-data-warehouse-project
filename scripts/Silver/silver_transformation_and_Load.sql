@@ -219,7 +219,7 @@ BEGIN
         PRINT 'Total time taken to load silver layer: ' + CAST(DATEDIFF(SECOND, @batch_startTime, @batch_endTime) AS NVARCHAR(10)) + ' seconds';
     END TRY
     BEGIN CATCH
-        PRINT '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!';
+        PRINT '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!';
         PRINT 'Error loading silver layer: ' + ERROR_MESSAGE();
         PRINT 'Error number: ' + CAST(ERROR_NUMBER() AS NVARCHAR(10));
         PRINT 'Error state: ' + CAST(ERROR_STATE() AS NVARCHAR(10));
